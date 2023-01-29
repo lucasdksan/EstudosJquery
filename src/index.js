@@ -24,4 +24,70 @@ $(document).ready(function(){
     $("td:contains(Bb)").css("background-color", "red").css("color", "white");
 
     $("td:parent()").css("background-color", "yellow").css("color", "black");
+
+    $("a[name^=lucas]").css("color", "red");
+
+    let aElement = $("a[name=lucas]");
+
+    console.log(aElement);
+
+    $(":submit").on("click", function(){
+        $(":text").css("border", "3px solid red");
+    });
+
+    $(".content-btn").on("click", function(){
+        $(".name-son").attr("data-game", "valorant melhor jogo de FPS");
+        $(".name-son").removeAttr("data-dad");
+        $(".name-son").addClass("dev");
+        var valueData = $(".name-son").attr("data-game");
+
+        alert(`VALOR: ${valueData}`);
+    });
+
+    $(".content-val > button").on("click", function(){
+        const valueP = $(".content-val > p").html(); // pode pegar o valor, alterar o conteudo de um elemento e alterar o conteudo como se fosse um outro atributo.
+        const pValue = $(".content-val > p").text()
+        const clone = $(".content-val > p").clone();
+
+        $(".content-val > div").replaceWith(clone);
+
+        alert(pValue);
+    });
+
+    $(".createImage-area > button").on("click", function(){
+        const skills = ["Q - CAÇADOR DE CABEÇAS", "E - RENDEZVOUS", "C - MARCA REGISTRADA", "X - TOUR DE FORCE"];
+        const image = $("<img />", {
+            src: "./chamber.png",
+            title: "O melhor agente do Valorant",
+            click: function(){
+                alert("EU AMO ESSA ARMA ");
+            },
+        });
+
+        const li = [];
+
+        skills.forEach((e)=>{
+            li.push($("<li/>").append(e));
+        });
+
+        const ul = $("<ul/>").append(li);
+
+        $(".createImage-area > div.area").append(image).append(ul);
+    });
+
+    $(".agents > button").not(".clear").on("click", function(){
+        console.log("1")
+
+        $(".agents > ul").append($("<li/>").append("viper"));
+        $(".agents > ul").prepend($("<li/>").append("killjoy"));
+
+        $(".agents > ul").before("<h1>Minha lista de agentes favoritos</h1>");
+        $(".agents > ul").after("<span>GOSTOU?</span>");
+        $(".agents > ul").wrap("<fieldset></fieldset>");
+    });
+
+    $(".agents  button.clear").on("click", function(){
+        $(".agents > ul").empty();
+        $(".agents fieldset > ul").empty();
+    });
 });
