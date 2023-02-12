@@ -90,4 +90,20 @@ $(document).ready(function(){
         $(".agents > ul").empty();
         $(".agents fieldset > ul").empty();
     });
+
+    // $(".containerEventJQUERY > button").on("click", function (){ 
+    //     $(".containerEventJQUERY > .containerResult").text("Foi apenas um click normal").css("color", "red");
+    // });
+
+    $(".containerEventJQUERY > button").dblclick(function(){
+        $(".containerEventJQUERY > .containerResult").text("Foram dois clicks").css("color", "red");
+    });
+
+    $(".containerEventJQUERY > button").mousemove(function(){
+        $(this).css("background", "blue");
+    });
+
+    $(".containerEventJQUERY > button").mouseout(function(){
+        $(this).css("background", "brown");
+    });
 });

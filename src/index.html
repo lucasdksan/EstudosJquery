@@ -6,6 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos JQuery</title>
+    <style>
+        .containerEventJQUERY {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .containerResult {
+            width: 400px;
+            height: 350px;
+            background-color: azure;
+            border: 2px thick black;
+        }
+
+        .containerEventJQUERY button {
+            background-color: brown;
+            color: white;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -160,6 +182,11 @@ Uma esposa tão incrível como você não vem desta terra; eles vêm direto do c
         </ul>
         <button>Adiconar mais</button>
         <button class="clear">Limpar</button>
+    </div>
+
+    <div class="containerEventJQUERY">
+        <div class="containerResult"></div>
+        <button>ACIONAR EVENTOS DE MOUSE</button>
     </div>
 
 </body>
