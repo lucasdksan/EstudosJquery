@@ -123,4 +123,12 @@ $(document).ready(function () {
         e.preventDefault();
         console.log(e)
     });
+
+    $(".container19 .btn-on").on("click", function(){
+        $(".container19 .text").fadeToggle(2000);
+    });
+
+    $(".container19 .btn-slide").on("click", function(){
+        $(".container19 .text").slideToggle(2000);
+    });
 });
