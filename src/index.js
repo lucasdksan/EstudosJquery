@@ -131,4 +131,6 @@ $(document).ready(function () {
     $(".container19 .btn-slide").on("click", function(){
         $(".container19 .text").slideToggle(2000);
     });
+
+    $("#text tbody tr").addClass("impar");
 });
